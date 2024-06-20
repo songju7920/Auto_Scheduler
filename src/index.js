@@ -122,4 +122,7 @@ const addItem = async () => {
     ]
   });
 };
-S;
+
+cron.schedule("* 8 * * *", async () => {
+  addItem();
+});
